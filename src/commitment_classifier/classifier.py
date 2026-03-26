@@ -31,12 +31,15 @@ class MessageClassifier:
             f"- We decided to do the API for the mobile UI\n"
             f"- We won't do the moonshot project\n"
             f"Classify the following message into one of these labels: \n"
-            f"- C1 binding commitments (example: I'll have it done by tomorrow)\n"
-            f"- C2 soft commitment.  (example: I'll do it if I have time)\n"
-            f"- P1 decision\n"
+            f"- C1_COMMITMENT binding commitments (example: I'll have it done by tomorrow)\n"
+            f"- C2_COMMITMENT soft commitment.  (example: I'll do it if I have time)\n"
+            f"- D1_DIRECTIVE directive\n"
+            f"- P1_DECISION decision\n"
             f"- N1 none of the above\n"
-            "Respond with JSON matching this schema:\n"
-            '{"label": "<chosen label>", "confidence": "high|medium|low", "reasoning": "<brief explanation>"}'
+            "output a CSV with these headers: message_id, classification, confidence, owner, deliverable, deadline. \n"
+            "leave owner/deliverable/deadline blank for N1_NONE messages. For P1_DECISION and D1_DIRECTIVE, \n"
+            "leave owner \n"
+            "blank but fill in deliverable with the decision or request\n"
         )
 
         response = self.client.messages.create(
