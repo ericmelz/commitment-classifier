@@ -1,0 +1,41 @@
+message_id,classification,confidence,owner,deliverable,deadline
+MSG001,C1_BINDING,high,alice.lee,API spec as a Notion doc,Friday
+MSG002,C1_BINDING,high,dave.kim,auth migration,Wednesday
+MSG003,C2_SOFT,high,carol.chen,update the onboarding flow,sometime next week
+MSG004,P1_DECISION,high,,API-first approach adopted; mobile app deferred to Q4,Q4
+MSG005,C2_SOFT,low,dave.kim,unspecified task from prior context,
+MSG006,C2_SOFT,medium,dave.kim,Review the PR for the auth changes,EOD
+MSG007,N1_NONE,high,,,
+MSG008,N1_NONE,high,,,
+MSG009,C1_BINDING,high,alice.lee,database migration,Thursday (end of sprint)
+MSG010,C2_SOFT,high,bob.williams,investigate caching issue,end of sprint
+MSG011,D1_DIRECTIVE,high,,technical architecture doc for the new auth system,next Tuesday (before board meeting)
+MSG012,N1_NONE,high,,,
+MSG013,C1_BINDING,high,dave.kim,"push fix to staging, run regression suite, and merge to main if tests pass",5pm today
+MSG014,C2_SOFT,medium,grace.wong,Complete mobile responsive views for new dashboard mockups,tomorrow
+MSG015,P1_DECISION,medium,,Use Redis as the caching solution over Memcached,
+MSG016,N1_NONE,high,,,
+MSG017,C1_BINDING,high,eve.martinez,scope and proposal for logging infrastructure overhaul,end of next sprint
+MSG018,N1_NONE,high,,,
+MSG019,P1_DECISION,high,,all customer-facing changes require product review before shipping,
+MSG020,N1_NONE,high,,,
+MSG021,C1_BINDING,high,dave.kim,refactor payment module to use new API client,end of week
+MSG022,C1_BINDING,medium,bob.williams,prototype ready for user testing session,Monday
+MSG023,N1_NONE,high,,,
+MSG024,P1_DECISION,high,,switch to two-week sprints starting next month,next month
+MSG025,C2_SOFT,medium,grace.wong,Polish the chosen landing page direction,Thursday
+MSG026,C2_SOFT,high,tom.baker,investigate the flaky ETL pipeline issue,
+MSG027,D1_DIRECTIVE,high,,review PR #347,
+MSG028,C1_BINDING,high,frank.zhou,Review PR #347 and provide comments,3pm today
+MSG029,N1_NONE,high,,,
+MSG030,P1_DECISION,high,,"deprecate v1 API by end of Q2: alice owns migration guide, dave handles sunset notifications, carol communicates to customers",end of Q2
+MSG031,P1_DECISION,high,,stick with custom component library instead of new one,
+MSG032,C1_BINDING,high,eve.martinez,rotate API keys during maintenance window and update 1Password,by morning
+MSG033,P1_DECISION,medium,,not rewriting the backend in Rust by next quarter,
+MSG034,D1_DIRECTIVE,medium,,review user flow diagrams in Figma,
+MSG035,C1_BINDING,high,alice.lee,sync with dave to align on endpoint naming conventions,tomorrow morning
+MSG036,N1_NONE,medium,,,
+MSG037,C1_BINDING,high,tom.baker,"Elasticsearch migration: mapping done by Wednesday, data sync running by Friday",Friday
+MSG038,P1_DECISION,high,,"Raise Series A in Q3 targeting $8-12M at $40-60M post; marcus leads technical narrative, carol owns metrics deck",Q3
+MSG039,N1_NONE,high,,,
+MSG040,C2_SOFT,medium,dave.kim,Investigate failing test suite on payments module,after lunch
