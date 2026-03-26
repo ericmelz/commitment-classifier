@@ -1,0 +1,11 @@
+[project]
+name = "commitment-classifier"
+version = "0.1.0"
+description = "Message classifier using Anthropic models"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "anthropic>=0.86.0",
+    "pydantic>=2.12.5",
+    "pydantic-settings>=2.13.1",
+]
