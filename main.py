@@ -1,15 +1,14 @@
+from pathlib import Path
+
 from src.commitment_classifier.classifier import MessageClassifier
 
 
 def main():
     classifier = MessageClassifier()
-    result = classifier.classify(
-        message="I will finish the report by Friday.",
-        labels=["commitment", "request", "question", "statement"],
+    classifier.classify_file(
+        input_path=Path("data/input/shadow_mode_test.json"),
+        output_path=Path("data/output/classified_messages.csv"),
     )
-    print(f"Label:      {result.label}")
-    print(f"Confidence: {result.confidence}")
-    print(f"Reasoning:  {result.reasoning}")
 
 
 if __name__ == "__main__":
