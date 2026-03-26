@@ -91,10 +91,11 @@ Thread replies include a `thread_context` array of prior messages. The classifie
 Settings are loaded from `.env` or environment variables via `pydantic-settings`:
 
 | Variable | Default | Description |
-|---|---|---|
+| --- | --- | --- |
 | `ANTHROPIC_API_KEY` | *(required)* | Your Anthropic API key |
 | `MODEL` | `claude-sonnet-4-6` | Claude model to use |
 | `MAX_TOKENS` | `1024` | Max tokens per response |
+| `MAX_MESSAGES` | `20` | Max number of messages to classify |
 
 ## Project structure
 

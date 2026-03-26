@@ -104,7 +104,7 @@ class MessageClassifier:
             data = json.load(f)
 
         users = data["metadata"]["users"]
-        messages = data["messages"]
+        messages = data["messages"][: self.settings.max_messages]
 
         results = []
         for msg in messages:

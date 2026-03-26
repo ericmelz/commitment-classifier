@@ -7,3 +7,4 @@ class Settings(BaseSettings):
     anthropic_api_key: str
     model: str = "claude-sonnet-4-6"
     max_tokens: int = 1024
+    max_messages: int = 20
