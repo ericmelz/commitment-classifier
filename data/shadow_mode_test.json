@@ -1,0 +1,555 @@
+{
+  "metadata": {
+    "description": "Shadow mode test dataset: 40 Slack messages from a simulated 200-person SaaS company over one week. Messages have already passed the prefilter — they all scored above the 0.35 authority score threshold. Eric's pipeline should classify each message and extract structured fields.",
+    "workspace_id": "W_TEST_ACME",
+    "workspace_name": "Acme Corp",
+    "channels": {
+      "C001": {
+        "name": "eng-backend",
+        "type": "engineering"
+      },
+      "C002": {
+        "name": "eng-frontend",
+        "type": "engineering"
+      },
+      "C003": {
+        "name": "product-decisions",
+        "type": "leadership"
+      },
+      "C004": {
+        "name": "design",
+        "type": "cross-functional"
+      },
+      "C005": {
+        "name": "ops",
+        "type": "operations"
+      },
+      "C006": {
+        "name": "general",
+        "type": "social"
+      },
+      "C007": {
+        "name": "leadership",
+        "type": "leadership"
+      }
+    },
+    "users": {
+      "U001": {
+        "name": "Alice Lee",
+        "display_name": "alice.lee",
+        "title": "Senior Backend Engineer"
+      },
+      "U002": {
+        "name": "Bob Williams",
+        "display_name": "bob.williams",
+        "title": "Frontend Lead"
+      },
+      "U003": {
+        "name": "Carol Chen",
+        "display_name": "carol.chen",
+        "title": "Product Manager"
+      },
+      "U004": {
+        "name": "Dave Kim",
+        "display_name": "dave.kim",
+        "title": "Backend Engineer"
+      },
+      "U005": {
+        "name": "Eve Martinez",
+        "display_name": "eve.martinez",
+        "title": "DevOps Engineer"
+      },
+      "U006": {
+        "name": "Frank Zhou",
+        "display_name": "frank.zhou",
+        "title": "QA Lead"
+      },
+      "U007": {
+        "name": "Grace Wong",
+        "display_name": "grace.wong",
+        "title": "Senior Designer"
+      },
+      "U008": {
+        "name": "Marcus Rivera",
+        "display_name": "marcus.rivera",
+        "title": "VP Engineering"
+      },
+      "U009": {
+        "name": "Priya Patel",
+        "display_name": "priya.patel",
+        "title": "CEO"
+      },
+      "U010": {
+        "name": "Tom Baker",
+        "display_name": "tom.baker",
+        "title": "Data Engineer"
+      }
+    }
+  },
+  "messages": [
+    {
+      "id": "MSG001",
+      "channel_id": "C001",
+      "user_id": "U001",
+      "text": "I'll have the API spec ready by Friday. Will share it as a Notion doc.",
+      "ts": "1711900800.000100",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG002",
+      "channel_id": "C001",
+      "user_id": "U004",
+      "text": "On it",
+      "ts": "1711901400.000200",
+      "thread_ts": "1711901200.000150",
+      "thread_context": [
+        {
+          "user_id": "U008",
+          "text": "Can someone take the auth migration? It needs to be done by Wednesday.",
+          "ts": "1711901200.000150"
+        }
+      ]
+    },
+    {
+      "id": "MSG003",
+      "channel_id": "C006",
+      "user_id": "U003",
+      "text": "I should be able to get the onboarding flow updated sometime next week",
+      "ts": "1711902000.000300",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG004",
+      "channel_id": "C003",
+      "user_id": "U008",
+      "text": "After discussing with the team, we're going API-first. Mobile app is deferred to Q4. @alice @bob @carol were all in alignment on this.",
+      "ts": "1711903000.000400",
+      "thread_ts": "1711890000.000050",
+      "thread_context": [
+        {
+          "user_id": "U003",
+          "text": "We need to decide: API-first or mobile-first? Both have tradeoffs.",
+          "ts": "1711890000.000050"
+        },
+        {
+          "user_id": "U001",
+          "text": "API-first gives us more flexibility long term. Mobile can wrap the API later.",
+          "ts": "1711890600.000060"
+        },
+        {
+          "user_id": "U002",
+          "text": "Agreed. Mobile-first locks us into a specific UX too early.",
+          "ts": "1711891200.000070"
+        }
+      ]
+    },
+    {
+      "id": "MSG005",
+      "channel_id": "C001",
+      "user_id": "U004",
+      "text": "sure lol",
+      "ts": "1711904000.000500",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG006",
+      "channel_id": "C001",
+      "user_id": "U004",
+      "text": "sure lol",
+      "ts": "1711905000.000600",
+      "thread_ts": "1711904800.000550",
+      "thread_context": [
+        {
+          "user_id": "U001",
+          "text": "@dave can you review the PR for the auth changes before EOD?",
+          "ts": "1711904800.000550"
+        }
+      ]
+    },
+    {
+      "id": "MSG007",
+      "channel_id": "C006",
+      "user_id": "U005",
+      "text": "I will never understand this codebase",
+      "ts": "1711906000.000700",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG008",
+      "channel_id": "C001",
+      "user_id": "U010",
+      "text": "thanks for handling that @alice, the deploy looks clean",
+      "ts": "1711907000.000800",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG009",
+      "channel_id": "C001",
+      "user_id": "U001",
+      "text": "I'll definitely get the database migration done before the sprint ends on Thursday",
+      "ts": "1711908000.000900",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG010",
+      "channel_id": "C001",
+      "user_id": "U002",
+      "text": "yeah I can probably look into the caching issue sometime this sprint",
+      "ts": "1711909000.001000",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG011",
+      "channel_id": "C003",
+      "user_id": "U008",
+      "text": "@alice.lee can you put together the technical architecture doc for the new auth system? We need it before the board meeting next Tuesday.",
+      "ts": "1711910000.001100",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG012",
+      "channel_id": "C006",
+      "user_id": "U003",
+      "text": "lmao we should probably fix our CI pipeline too while we're at it",
+      "ts": "1711911000.001200",
+      "thread_ts": "1711910800.001150",
+      "thread_context": [
+        {
+          "user_id": "U005",
+          "text": "another deploy, another prayer",
+          "ts": "1711910700.001130"
+        },
+        {
+          "user_id": "U004",
+          "text": "[shared a meme about deployment failures]",
+          "ts": "1711910800.001150"
+        }
+      ]
+    },
+    {
+      "id": "MSG013",
+      "channel_id": "C001",
+      "user_id": "U004",
+      "text": "I'll push the fix to staging this afternoon and run the regression suite. If it passes, I'll merge to main before 5pm.",
+      "ts": "1711912000.001300",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG014",
+      "channel_id": "C004",
+      "user_id": "U007",
+      "text": "The new dashboard mockups are almost done, I just need to finish the mobile responsive views. Probably tomorrow.",
+      "ts": "1711913000.001400",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG015",
+      "channel_id": "C001",
+      "user_id": "U001",
+      "text": "Let's go with Redis. I've benchmarked it against Memcached and it's 3x faster for our access patterns. @bob @dave — any objections?",
+      "ts": "1711914000.001500",
+      "thread_ts": "1711913500.001450",
+      "thread_context": [
+        {
+          "user_id": "U008",
+          "text": "We need to decide on the caching strategy before proceeding.",
+          "ts": "1711913500.001450"
+        }
+      ]
+    },
+    {
+      "id": "MSG016",
+      "channel_id": "C006",
+      "user_id": "U002",
+      "text": "blocked on the design review, waiting for @grace.wong to finish the mockups",
+      "ts": "1711915000.001600",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG017",
+      "channel_id": "C001",
+      "user_id": "U005",
+      "text": "I can take that on. Give me until end of next sprint to scope it and put together a proposal.",
+      "ts": "1711916000.001700",
+      "thread_ts": "1711915800.001650",
+      "thread_context": [
+        {
+          "user_id": "U001",
+          "text": "We need someone to own the logging infrastructure overhaul.",
+          "ts": "1711915800.001650"
+        }
+      ]
+    },
+    {
+      "id": "MSG018",
+      "channel_id": "C001",
+      "user_id": "U010",
+      "text": "fyi the monitoring dashboard is updated with the new metrics. Let me know if anything looks off.",
+      "ts": "1711917000.001800",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG019",
+      "channel_id": "C007",
+      "user_id": "U009",
+      "text": "Going forward, all customer-facing changes need a product review before shipping. No exceptions. @marcus.rivera @carol.chen please make sure your teams know.",
+      "ts": "1711918000.001900",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG020",
+      "channel_id": "C001",
+      "user_id": "U001",
+      "text": "I think we should consider moving to a microservices architecture at some point, it would solve a lot of our scaling issues",
+      "ts": "1711919000.002000",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG021",
+      "channel_id": "C001",
+      "user_id": "U004",
+      "text": "I'll refactor the payment module to use the new API client by end of week",
+      "ts": "1711920000.002100",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG022",
+      "channel_id": "C002",
+      "user_id": "U002",
+      "text": "yep",
+      "ts": "1711921000.002200",
+      "thread_ts": "1711920800.002150",
+      "thread_context": [
+        {
+          "user_id": "U003",
+          "text": "@bob can you have the prototype ready for the user testing session on Monday?",
+          "ts": "1711920800.002150"
+        }
+      ]
+    },
+    {
+      "id": "MSG023",
+      "channel_id": "C005",
+      "user_id": "U005",
+      "text": "I've set up the new staging environment. Credentials are in 1Password under 'Staging v2'. Let me know if anyone has access issues.",
+      "ts": "1711922000.002300",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG024",
+      "channel_id": "C003",
+      "user_id": "U003",
+      "text": "After the retro, we agreed to switch to two-week sprints starting next month. @marcus approved. @alice @bob @dave @eve will adjust their planning accordingly.",
+      "ts": "1711923000.002400",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG025",
+      "channel_id": "C004",
+      "user_id": "U007",
+      "text": "Here are the three options for the new landing page. Let me know which direction feels right and I'll polish it up by Thursday.",
+      "ts": "1711924000.002500",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG026",
+      "channel_id": "C001",
+      "user_id": "U010",
+      "text": "I might be able to look at the data pipeline issue but honestly I'm pretty swamped right now",
+      "ts": "1711925000.002600",
+      "thread_ts": "1711924800.002550",
+      "thread_context": [
+        {
+          "user_id": "U008",
+          "text": "The ETL pipeline has been flaky for two weeks. Someone needs to dig into it.",
+          "ts": "1711924800.002550"
+        }
+      ]
+    },
+    {
+      "id": "MSG027",
+      "channel_id": "C001",
+      "user_id": "U001",
+      "text": "Done. PR is up: #347. @frank can you take a look?",
+      "ts": "1711926000.002700",
+      "thread_ts": "1711908000.000900",
+      "thread_context": [
+        {
+          "user_id": "U001",
+          "text": "I'll definitely get the database migration done before the sprint ends on Thursday",
+          "ts": "1711908000.000900"
+        }
+      ]
+    },
+    {
+      "id": "MSG028",
+      "channel_id": "C001",
+      "user_id": "U006",
+      "text": "Will review it this afternoon, should have comments by 3pm",
+      "ts": "1711926600.002800",
+      "thread_ts": "1711908000.000900",
+      "thread_context": [
+        {
+          "user_id": "U001",
+          "text": "I'll definitely get the database migration done before the sprint ends on Thursday",
+          "ts": "1711908000.000900"
+        },
+        {
+          "user_id": "U001",
+          "text": "Done. PR is up: #347. @frank can you take a look?",
+          "ts": "1711926000.002700"
+        }
+      ]
+    },
+    {
+      "id": "MSG029",
+      "channel_id": "C006",
+      "user_id": "U004",
+      "text": "who wants coffee? I'm doing a run",
+      "ts": "1711927000.002900",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG030",
+      "channel_id": "C003",
+      "user_id": "U008",
+      "text": "We need to deprecate the v1 API by end of Q2. @alice will own the migration guide, @dave will handle the sunset notifications, and @carol will communicate to customers.",
+      "ts": "1711928000.003000",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG031",
+      "channel_id": "C002",
+      "user_id": "U002",
+      "text": "tried the new component library, not sure it's the right fit. Going to stick with our custom stuff for now.",
+      "ts": "1711929000.003100",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG032",
+      "channel_id": "C005",
+      "user_id": "U005",
+      "text": "I'll rotate the API keys tonight during the maintenance window and update 1Password by morning",
+      "ts": "1711930000.003200",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG033",
+      "channel_id": "C001",
+      "user_id": "U004",
+      "text": "lol yeah that's never going to happen",
+      "ts": "1711931000.003300",
+      "thread_ts": "1711930500.003250",
+      "thread_context": [
+        {
+          "user_id": "U010",
+          "text": "do you think we could rewrite the entire backend in Rust by next quarter?",
+          "ts": "1711930500.003250"
+        }
+      ]
+    },
+    {
+      "id": "MSG034",
+      "channel_id": "C004",
+      "user_id": "U007",
+      "text": "Just wrapped up the user flow diagrams. Uploading to Figma now. @carol take a look when you get a chance.",
+      "ts": "1711932000.003400",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG035",
+      "channel_id": "C001",
+      "user_id": "U001",
+      "text": "Sounds good, I'll sync with @dave tomorrow morning to align on the endpoint naming conventions",
+      "ts": "1711933000.003500",
+      "thread_ts": "1711932500.003450",
+      "thread_context": [
+        {
+          "user_id": "U008",
+          "text": "Make sure the new API endpoints follow the naming convention we discussed.",
+          "ts": "1711932500.003450"
+        }
+      ]
+    },
+    {
+      "id": "MSG036",
+      "channel_id": "C003",
+      "user_id": "U003",
+      "text": "We should think about adding SSO at some point. Several enterprise prospects have asked about it.",
+      "ts": "1711934000.003600",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG037",
+      "channel_id": "C001",
+      "user_id": "U010",
+      "text": "I'll take the Elasticsearch migration. Should have the mapping done by Wednesday and the data sync running by Friday.",
+      "ts": "1711935000.003700",
+      "thread_ts": "1711934500.003650",
+      "thread_context": [
+        {
+          "user_id": "U008",
+          "text": "We need to move search from Postgres full-text to Elasticsearch. Who can own this?",
+          "ts": "1711934500.003650"
+        }
+      ]
+    },
+    {
+      "id": "MSG038",
+      "channel_id": "C007",
+      "user_id": "U009",
+      "text": "We've decided to raise a Series A in Q3. @marcus will lead the technical narrative, @carol will own the metrics deck. Target: $8-12M at $40-60M post.",
+      "ts": "1711936000.003800",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG039",
+      "channel_id": "C005",
+      "user_id": "U005",
+      "text": "heads up: AWS is showing elevated latency in us-east-1. Monitoring but no action needed yet.",
+      "ts": "1711937000.003900",
+      "thread_ts": null,
+      "thread_context": null
+    },
+    {
+      "id": "MSG040",
+      "channel_id": "C001",
+      "user_id": "U004",
+      "text": "k I'll do it after lunch",
+      "ts": "1711938000.004000",
+      "thread_ts": "1711937500.003950",
+      "thread_context": [
+        {
+          "user_id": "U006",
+          "text": "@dave the test suite is failing on the payments module. Can you investigate?",
+          "ts": "1711937500.003950"
+        }
+      ]
+    }
+  ]
+}
